@@ -1,0 +1,249 @@
+.container {
+  display: grid;
+  grid-template-columns: 0.6fr 1fr 0.9fr 1.1fr 1fr 1fr 0.0fr;
+  grid-template-rows: 2fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "heder heder heder heder heder heder heder"
+    ". . . h2 h2 nav nav"
+    ". . text text text nav nav"
+    ". . . . . . ."
+    ". . my-button my-button my-button . ."
+    ". . . . . . .";
+}
+
+.heder {
+  grid-area: heder;
+  background-color: #274560;
+  height: 100px;
+  width: 110%;
+}
+
+.nav {
+  grid-area: nav;
+}
+
+.my-button {
+  grid-area: my-button;
+
+}
+
+.h2 {
+  grid-area: h2;
+  margin-top: -400px;
+  margin-left: 600px;
+  font-size: 25px;
+  color: white;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+
+html, body, .container {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background-image: url(imgT/lnl.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  overflow-x: hidden;
+}
+.text {
+  grid-area: text;
+  color: white;
+  font-size: 20px;
+  margin-top: 200px;
+  margin-left: 0; /* Set the left margin to 0 */
+}
+
+
+
+@media screen and (max-width: 775px) {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    justify-items: end;
+    overflow-x: hidden;
+    grid-template-areas:
+      "heder heder heder heder heder heder heder heder"
+      ". . . . . nav nav nav"
+      ". . . . . nav nav nav"
+      ". . . . . nav nav nav"
+      ". . h2 h2 h2 h2 h2 h2"
+      ". . text text text text text text"
+      ". . my-button my-button my-button my-button my-button ."
+      ". . my-button my-button my-button my-button my-button .";
+  }
+
+  .my-button {
+    display: none;
+    flex-direction: row; 
+    justify-content: flex-end; 
+    align-items: center; 
+  }
+
+  .my-button a {
+    margin: 15px;
+    display: none;
+    padding: 15px 20px; /* Adjust padding for smaller screens */
+  }
+
+  img.logo{
+    margin-left: -220px;
+  }
+
+  .heder {
+    width: 100%;
+  }
+
+  .h2 {
+    margin-top: -300px;
+    margin-left: 210px;
+    
+  }
+  .text {
+    margin-left: -20px;
+}
+div.text{
+  margin-left: -100px;
+}
+
+}
+
+@media screen and (max-width: 435px) {
+  .my-button {
+    display: none;
+  }
+
+  .text {
+    margin-top: 200px;
+    margin-left: -45px;
+    font-size: 16px;
+  }
+  img.logo{
+    margin-left: -200px;
+    margin-top: -100px;
+    width: 600px;
+  }
+  .h2 {
+    
+    margin-top: -240px;
+    margin-left: 70px;
+  }
+
+  
+}
+
+@media screen and (max-width: 380px) {
+  .my-button {
+    display: none;
+  }
+
+  div.text {
+    margin-top: 300px;
+    margin-left: -70px;
+    font-size: 16px;
+  }
+  img.logo{
+    margin-left: -200px;
+    margin-top: -100px;
+    width: 600px;
+  }
+  div.h2{
+    margin-top: -250px;
+    font-size: 18px;
+    margin-left: 40px;
+  }
+}
+
+.logo {
+  margin-top: -150px;
+  margin-left: -180px;
+  width: 800px;
+}
+
+a {
+  text-decoration: none;
+  color: #f3eded;
+  transition: color 0.3s ease;
+}
+
+ul {
+  position: relative;
+  transform: skewY(-15deg);
+}
+
+li {
+  position: relative;
+  list-style: none;
+  width: 200px;
+  padding: 15px;
+  background: #215370;
+  z-index: calc(1 * var(--i));
+  transition: 0.5s;
+}
+
+li:hover {
+  background: #d2cdc3;
+  transform: translateX(-50px);
+}
+
+li::before {
+  font-family: "fontAwesome";
+  color: #88857f;
+  display: flex;
+  justify-content: center;
+  content: attr(data-icon);
+  position: absolute;
+  top: 0px;
+  left: -40px;
+  width: 40px;
+  height: 100%;
+  background: #215370;
+  transform-origin: right;
+  transform: skewY(45deg);
+  transition: 0.5s;
+}
+
+li:hover::before {
+  background: #2c2c2c;
+}
+
+li::after {
+  content: "";
+  position: absolute;
+  top: -40px;
+  left: 0px;
+  width: 100%;
+  height: 40px;
+  background: #215370;
+  transform-origin: bottom;
+  transform: skewX(45deg);
+  transition: 0.5s;
+}
+
+.my-button {
+  grid-area: my-button;
+  display: flex;
+  margin: 50px;
+  margin-left: -100px;
+  justify-content: space-between; /* Adjust as needed */
+}
+
+.my-button a {
+  margin: 30px;
+  padding: 20px ;
+  background-color: #3498db;
+  color: white;
+  border-radius: 5px;
+  box-shadow: 0px 1px 15px rgba(255, 255, 255, 0.559);
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+

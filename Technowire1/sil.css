@@ -1,0 +1,990 @@
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  grid-auto-columns: 300px;
+  grid-auto-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+}
+
+body {
+  background-image: url(imgT/lnl.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  overflow-x: hidden;
+}
+
+
+
+
+.heder {
+  grid-area: 1 / 1 / 2 / 13;
+}
+
+.logo {
+  grid-area: 1 / 1 / 2 / 5;
+}
+
+.nav {
+  grid-area: 2 / 11 / 3 / 13;
+}
+
+.content {
+  grid-area: 4 / 2 / 6 / 12;
+}
+
+
+html,
+body,
+.container {
+  height: 100%;
+  margin: 0;
+}
+
+.logo {
+  position: absolute;
+  top: -150px;
+  left: -240px;
+  width: 800px;
+
+
+}
+
+
+.heder {
+  background-color: #274560;
+  height: 100px;
+  width: 110%;
+}
+
+@media screen and (max-width: 600px) {
+
+
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1.3fr 1.4fr 1.6fr 0.9fr 1fr 1fr 1fr 0.8fr 1.2fr;
+    grid-template-rows: 0.5fr 1.5fr 1fr 1fr 1fr;
+    grid-auto-columns: 300px;
+    grid-auto-rows: 1fr;
+    overflow-x: hidden;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "heder heder heder heder heder heder heder heder heder heder heder heder"
+      ". . . . nav nav nav nav nav nav nav nav"
+      "content content content content content content content content content content content content"
+      "content content content content content content content content content content content content"
+      "content content content content content content content content content content content content";
+  }
+
+  .heder {
+    grid-area: heder;
+  }
+
+  .nav {
+    grid-area: nav;
+  }
+
+  .content {
+    grid-area: content;
+    overflow-x: hidden;
+  }
+
+
+
+  html,
+  body,
+  .container {
+    height: 100%;
+    margin: 0;
+
+  }
+
+}
+
+a {
+  text-decoration: none;
+  color: #f3eded;
+
+  transition: color 0.3s ease;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+  /* Set the width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: #232835;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #374451;
+  border-radius: 6px;
+
+}
+
+
+ul {
+  position: relative;
+  transform: skewY(-15deg);
+}
+
+li {
+  position: relative;
+  list-style: none;
+  width: 200px;
+  padding: 15px;
+  background: #215370;
+  z-index: calc(1 * var(--i));
+  transition: 0.5s;
+  top: 57px;
+  left: 190px;
+}
+
+li:hover {
+  background: #d2cdc3;
+  transform: translateX(-50px);
+}
+
+li::before {
+  font-family: "fontAwesome";
+  color: #88857f;
+  display: flex;
+  justify-content: center;
+  content: attr(data-icon);
+  position: absolute;
+  top: 0px;
+  left: -40px;
+  width: 40px;
+  height: 100%;
+  background: #215370;
+  transform-origin: right;
+  transform: skewY(45deg);
+  transition: 0.5s;
+}
+
+li:hover::before {
+  background: #2c2c2c;
+}
+
+li::after {
+  content: "";
+  position: absolute;
+  top: -40px;
+  left: 0px;
+  width: 100%;
+  height: 40px;
+  background: #215370;
+  transform-origin: bottom;
+  transform: skewX(45deg);
+  transition: 0.5s;
+}
+
+h1 {
+  position: absolute;
+  top: 180px;
+  left: 545px;
+  color: #f5a623;
+
+}
+
+.o0 {
+  position: absolute;
+  top: 215px;
+  left: 70px;
+  background-color: #f5a623;
+}
+
+
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+
+  font-family: Helvetica, sans-serif;
+}
+
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+.containerSiliconValley {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+
+.containerSiliconValley::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: 33px;
+  background-color: rgb(255, 255, 255);
+  border: 4px solid #000000;
+  top: -420px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.contenttt::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -70px;
+  background-color: rgb(255, 255, 255);
+  border: 4px solid #000000;
+  top: 25px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.contentt::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: 560px;
+  background-color: rgb(255, 255, 255);
+  border: 4px solid #000000;
+  top: 25px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.containerSiliconValley.right::after {
+  left: -67px;
+}
+
+.right-containerr-arrow {
+  height: 0;
+  width: 0;
+  position: absolute;
+  top: 1px;
+  z-index: 1;
+  border: medium solid rgb(255, 255, 255);
+  border-width: 10px 10px 10px 0;
+  border-color: transparent rgb(255, 255, 255) transparent transparent;
+  left: -46px;
+}
+
+.left {
+  left: 0;
+}
+
+.right {
+  left: 50%;
+}
+
+.left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: -420px;
+  width: 0;
+  z-index: 1;
+  left: 500px;
+  right: 30px;
+  border: medium solid rgb(255, 255, 255);
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent rgb(255, 255, 255);
+}
+
+.left-containerr-arrow {
+  height: 0;
+  width: 0px;
+  position: absolute;
+  top: 28px;
+  z-index: 1;
+  border: medium solid rgb(255, 255, 255);
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent rgb(255, 255, 255);
+  right: -10px;
+}
+
+.right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: -410px;
+  width: 0;
+  z-index: 1;
+  left: -30px;
+  border: medium solid rgb(255, 255, 255);
+  border-width: 10px 10px 10px 0;
+  border-color: transparent rgb(255, 255, 255) transparent transparent;
+}
+
+.right::after {
+  left: -16px;
+}
+
+.content {
+  padding: 20px 30px;
+  background-color: #274560;
+  border-radius: 6px;
+  position: relative;
+  top: -450px;
+  left: -60px;
+  color: white;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+
+
+@media screen and (max-width: 1393px) {
+
+  .timeline::after {
+    left: 31px;
+  }
+
+  .containerSiliconValley {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+
+  }
+
+  .containerSiliconValley::before {
+    left: -100px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+  }
+
+  .left::after,
+  .right::after {
+    left: 1px;
+  }
+
+  .right {
+    left: 0%;
+  }
+}
+
+.nocenter {
+  text-align: left;
+  padding-left: 200px;
+}
+
+.link {
+  color: blue;
+}
+
+p {
+  width: 100%;
+
+}
+
+.PP {
+  position: relative;
+  left: 7px;
+  color: white;
+  top: -2px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.contenttt {
+  padding: 20px 30px;
+  width: 540px;
+  background-color: #274560;
+  border-radius: 6px;
+  position: relative;
+  left: -685px;
+  top: -450px;
+  color: white;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  background-color: white;
+  top: -460px;
+  bottom: 0;
+  left: 550px;
+  margin-left: -3px;
+  height: 3730px;
+}
+
+.nav {
+  position: relative;
+  left: -150px;
+}
+
+.titleSIL {
+  background-color: #0b2130;
+  color: #fff;
+  transform: skew(-10deg);
+  box-shadow: 0px 1px 15px rgba(255, 255, 255, 0.559);
+  margin-top: -10px;
+
+}
+
+.contentt {
+  padding: 20px 30px;
+  width: 540px;
+  background-color: #274560;
+  border-radius: 6px;
+  position: relative;
+  left: 750px;
+  top: -450px;
+}
+
+@media only screen and (max-width: 775px) {
+  .contentt {
+    position: relative;
+    left: 100px;
+    width: 620px;
+    top: -190px;
+  }
+
+  .contenttt {
+    position: relative;
+    left: 30px;
+    width: 620px;
+    top: -200px;
+  }
+
+  .content {
+    position: relative;
+    left: 30px;
+    width: 620px;
+    top: -220px;
+  }
+
+  .timeline::after {
+    position: absolute;
+    left: 15px;
+    top: -230px;
+    height: 3900px;
+  }
+
+  .contenttt::after {
+    position: absolute;
+    left: -100px;
+
+  }
+
+  .contentt::after {
+    position: absolute;
+    left: -100px;
+
+  }
+
+  .containerSiliconValley::after {
+    position: absolute;
+    left: -2px;
+    top: -180px;
+
+  }
+
+  .containerSiliconValley.right::after {
+    position: absolute;
+    left: -2px;
+  }
+
+  .left::before {
+    position: absolute;
+    left: 90px;
+    top: -176px;
+  }
+
+  .right::before {
+    position: absolute;
+    left: 90px;
+    top: -170px;
+  }
+
+  .nav {
+    margin-left: -150px;
+    top: 10px;
+
+  }
+
+  .left-containerr-arrow {
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 33px;
+    z-index: 1;
+    border: medium solid rgb(255, 255, 255);
+    border-width: 10px 10px 10px 0;
+    border-color: transparent rgb(255, 255, 255) transparent transparent;
+    left: -10px;
+  }
+
+  .titleSIL {
+    margin-left: -470px;
+    margin-top: 220px;
+  }
+
+}
+
+@media only screen and (max-width: 435px) {
+  .contentt {
+    position: relative;
+    left: 100px;
+    width: 300px;
+    top: -190px;
+  }
+
+  .contenttt {
+    position: relative;
+    left: 30px;
+    width: 300px;
+    top: -200px;
+  }
+
+  .content {
+    position: relative;
+    left: 30px;
+    width: 300px;
+    top: -220px;
+  }
+
+  .timeline::after {
+    position: absolute;
+    left: 15px;
+    top: -230px;
+    height: 4800px;
+  }
+
+  .contenttt::after {
+    position: absolute;
+    left: -100px;
+
+  }
+
+  .contentt::after {
+    position: absolute;
+    left: -100px;
+
+  }
+
+  .containerSiliconValley::after {
+    position: absolute;
+    left: -2px;
+    top: -180px;
+
+  }
+
+  .containerSiliconValley.right::after {
+    position: absolute;
+    left: -2px;
+  }
+
+  .left::before {
+    position: absolute;
+    left: 90px;
+    top: -176px;
+  }
+
+  .right::before {
+    position: absolute;
+    left: 90px;
+    top: -170px;
+  }
+
+  .left-containerr-arrow {
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 33px;
+    z-index: 1;
+    border: medium solid rgb(255, 255, 255);
+    border-width: 10px 10px 10px 0;
+    border-color: transparent rgb(255, 255, 255) transparent transparent;
+    left: -10px;
+  }
+
+  .logo {
+    position: relative;
+    width: 550px;
+    top: -86px;
+    left: -180px;
+  }
+
+  .nav {
+    margin-left: 14px;
+    top: 20px;
+  }
+
+}
+
+
+
+
+
+@media only screen and (max-width: 400px) {
+  .leftpanelres {
+    width: 100%;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-right: 10px;
+  }
+
+  .rightpanelres {
+    width: 80%;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .topNav {
+    display: flex;
+
+  }
+
+  .headertitle {
+    width: 100%;
+  }
+
+  .info {
+    margin-top: 220px;
+  }
+
+}
+
+@font-face {
+  font-family: agency fb;
+  font-style: normal;
+  font-weight: 400;
+  src: local('Agency FB'), local('AgencyFB-Regular'), url(../fonts/agency-fb.woff) format('woff'), url(../fonts/agency-fb.ttf) format('truetype')
+}
+
+@font-face {
+  font-family: agency fb bold;
+  font-style: normal;
+  font-weight: 700;
+  src: local('Agency FB Bold'), local('AgencyFB-Bold'), url(../fonts/agency-fb-bold.woff) format('woff'), url(../fonts/agency-fb-bold.ttf) format('truetype')
+}
+
+@media screen and (max-width: 400px) {
+
+  .contentt {
+    position: absolute;
+    left: 110px;
+    width: 217px;
+    top: -350px;
+
+
+
+  }
+
+  .content {
+    position: relative;
+    left: 540px;
+    top: -554px;
+
+  }
+
+  .timeline {
+    position: relative;
+    left: -500px;
+    height: 900%;
+    top: 170px;
+  }
+
+  .contenttt {
+    position: relative;
+    left: 540px;
+    width: 217px;
+    top: -535px;
+
+
+
+  }
+
+  .timeline::after {
+    height: 5940px;
+  }
+
+  .nav {
+    position: absolute;
+    top: 100px;
+    left: 120px;
+  }
+
+  .logo {
+    width: 550px;
+    top: -90px;
+    left: -180px;
+  }
+}
+
+@media only screen and (max-width: 395px) {
+  .contentt {
+    position: relative;
+    left: 70px;
+    width: 300px;
+    top: -200px;
+  }
+
+  .contenttt {
+    position: relative;
+    left: 500px;
+    width: 300px;
+    top: -380px;
+  }
+
+  .content {
+    position: relative;
+    left: 500px;
+    top: -400px;
+  }
+
+  .timeline::after {
+    position: absolute;
+    left: 530px;
+    top: -418px;
+    height: 4800px;
+  }
+
+  .contenttt::after {
+    position: absolute;
+    left: -56px;
+
+  }
+
+  .contentt::after {
+    position: absolute;
+    left: -56px;
+
+  }
+
+  .containerSiliconValley::after {
+    position: absolute;
+    left: 514px;
+    top: -350px;
+
+  }
+
+  .containerSiliconValley.right::after {
+    position: absolute;
+    left: 514px;
+  }
+
+  .left::before {
+    position: absolute;
+    left: 560px;
+    top: -341px;
+  }
+
+  .right::before {
+    position: absolute;
+    left: 560px;
+    top: -340px;
+  }
+
+  .left-containerr-arrow {
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 33px;
+    z-index: 1;
+    border: medium solid rgb(255, 255, 255);
+    border-width: 10px 10px 10px 0;
+    border-color: transparent rgb(255, 255, 255) transparent transparent;
+    left: -10px;
+  }
+
+  .nav {
+    position: relative;
+    left: -17px;
+    top: 10px;
+  }
+}
+
+@media only screen and (max-width: 380px) {
+  .contentt {
+    position: relative;
+    left: 70px;
+    width: 245px;
+    top: -100px;
+  }
+
+  .contenttt {
+    position: relative;
+    left: 500px;
+    width: 245px;
+    top: -300px;
+  }
+
+  .content {
+    position: relative;
+    left: 500px;
+    width: 245px;
+    top: -320px;
+  }
+
+  .timeline::after {
+    position: absolute;
+    left: 513px;
+    top: -310px;
+    height: 5350px;
+  }
+
+  .contenttt::after {
+    position: absolute;
+    left: -73px;
+
+  }
+
+  .contentt::after {
+    position: absolute;
+    left: -73px;
+
+  }
+
+  .containerSiliconValley::after {
+    position: absolute;
+    left: 497px;
+    top: -280px;
+
+  }
+
+  .containerSiliconValley.right::after {
+    position: absolute;
+    left: 497px;
+  }
+
+  .left::before {
+    position: absolute;
+    left: 560px;
+    top: -270px;
+  }
+
+  .right::before {
+    position: absolute;
+    left: 560px;
+    top: -364px;
+  }
+
+  .left-containerr-arrow {
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 33px;
+    z-index: 1;
+    border: medium solid rgb(255, 255, 255);
+    border-width: 10px 10px 10px 0;
+    border-color: transparent rgb(255, 255, 255) transparent transparent;
+    left: -10px;
+  }
+
+  .nav {
+    position: relative;
+    left: -190px;
+    top: 20px;
+  }
+}
+
+@media screen and (max-width: 325px) {
+  .logo {
+    position: relative;
+    width: 550px;
+    top: -86px;
+    left: -180px;
+  }
+
+  .contentt {
+    position: relative;
+    left: 70px;
+    width: 245px;
+    top: -210px;
+  }
+
+  .contenttt {
+    position: relative;
+    left: 500px;
+    width: 245px;
+    top: -390px;
+  }
+
+  .content {
+    position: relative;
+    left: 500px;
+    width: 245px;
+    top: -400px;
+  }
+
+  .timeline::after {
+    position: absolute;
+    left: 513px;
+    top: -420px;
+    height: 5380px;
+  }
+
+  .contenttt::after {
+    position: absolute;
+    left: -73px;
+
+  }
+
+  .contentt::after {
+    position: absolute;
+    left: -73px;
+
+  }
+
+  .containerSiliconValley::after {
+    position: absolute;
+    left: 498px;
+    top: -370px;
+
+  }
+
+  .containerSiliconValley.right::after {
+    position: absolute;
+    left: 498px;
+  }
+
+  .left::before {
+    position: absolute;
+    left: 560px;
+    top: -362px;
+  }
+
+  .right::before {
+    position: absolute;
+    left: 560px;
+    top: -364px;
+  }
+
+  .left-containerr-arrow {
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 33px;
+    z-index: 1;
+    border: medium solid rgb(255, 255, 255);
+    border-width: 10px 10px 10px 0;
+    border-color: transparent rgb(255, 255, 255) transparent transparent;
+    left: -10px;
+  }
+
+  .nav {
+    position: relative;
+    left: -225px;
+    top: 30px;
+  }
+}

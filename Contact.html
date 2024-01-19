@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="process_form.php">
+<link rel="icon" type="image/x-icon" sizes="32x32" href="imgPF/PF.jpg">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>he3_portfolio</title>
+
+    <link rel="stylesheet" href="./portfolio.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+        integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+
+<body>
+    <header>
+        <nav>
+            <ul class='nav-bar'>
+                <h2 class="m3">Portfo<span class="bjl">lio</span></h2>
+                <input type='checkbox' id='check' />
+                <span class="menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="About.html">About</a></li>
+
+                    <li><a href="Projecten.html">Projecten</a></li>
+                    <li><a href="Contact.html">Contact</a></li>
+                    <label for="check" class="close-menu"><i class="fas fa-times"></i></label>
+                </span>
+                <label for="check" class="open-menu"><i class="fas fa-bars"></i></label>
+            </ul>
+        </nav>
+    </header>
+    <div class="Contact">
+
+        <div class="main-heading">
+            <h3> Send me a message</h3>
+
+            <hr color="black" size="5" width="100%" class="p0">
+
+
+        </div>
+        <div class="content">
+            <form action="process_form.php" method="post">
+                <input class="main-input1" type="text" name="name" placeholder="Your Name" required>
+                <input class="main-input3" type="email" name="email" placeholder="Your Email" required>
+                <textarea class="main-input2" name="message" placeholder="Your Message" required></textarea>
+                <input type="hidden" name="_captcha" value="false">
+                <input class="main-input4" type="submit" value="Send Message">
+            </form>
+
+            </form>
+
+        </div>
+
+
+
+
+</body>
+
+</html>
